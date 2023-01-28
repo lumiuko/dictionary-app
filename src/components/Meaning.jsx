@@ -2,7 +2,7 @@ export default function Meaning({ meaning }) {
   const definitions = meaning.definitions.map((definition, index) => (
     <li className="mt-[0.875rem]" key={index}>
       <p>{definition.definition}</p>
-      {definition.example && <p className="text-gray mt-3">{definition.example}</p>}
+      {definition.example && <p className="text-gray mt-3">"{definition.example}"</p>}
     </li>
   ))
 
@@ -16,7 +16,7 @@ export default function Meaning({ meaning }) {
       </div>
 
       <p className="text-gray tablet:text-heading-s tablet:leading-heading-s">Meaning</p>
-      <ul className="list-disc mx-6 mt-4 marker:text-purple marker:text-[15px]">{definitions}</ul>
+      <ul className="list-disc mx-4 mt-4 marker:text-purple marker:text-[15px]">{definitions}</ul>
       {meaning.synonyms.length > 0 && (
         <div className="flex items-center mt-6 tablet:mt-10 gap-6">
           <p className="text-gray">Synonyms</p>

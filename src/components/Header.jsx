@@ -43,7 +43,12 @@ export default function Header(props) {
 
         <div className="flex items-center">
           <Switch checked={isDarkTheme} toggle={toggleTheme} />
-          <img src={isDarkTheme ? moonIconDark : moonIcon} aria-hidden="true" className="ml-3" alt="Moon icon" />
+          <img
+            src={isDarkTheme ? moonIconDark : moonIcon}
+            aria-hidden="true"
+            className="ml-3 tablet:ml-5"
+            alt="Moon icon"
+          />
         </div>
       </div>
     </header>
