@@ -49,7 +49,7 @@ export default function Word({ data, isError }) {
         )}
       </div>
       {meanings}
-      <div className="mt-8 tablet:mt-[2.375rem] pt-6 tablet:pt-[1.125rem] border-t-1 border-t-[1px] border-t-gray-2 text-body-s leading-body-s tablet:flex items-center">
+      <div className="mt-8 tablet:mt-[2.375rem] pt-6 tablet:pt-[1.125rem] border-t-1 border-t-[1px] border-t-gray-2 dark:border-t-black-4 text-body-s leading-body-s tablet:flex items-center">
         <div className="text-gray mb-2 underline tablet:mr-5 tablet:mb-0">Source</div>
         <div className="flex">
           <a href={data.sourceUrls[0]} className="underline mr-2" target="_blank">
