@@ -41,7 +41,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/dictionary-app-using-react-and-tailwind-dl-_MuX5Ld](https://www.frontendmentor.io/solutions/dictionary-app-using-react-and-tailwind-dl-_MuX5Ld)
-- Live Site URL: [https://react-app-dictionary.vercel.app/](https://react-app-dictionary.vercel.app/)
+- Live Site URL: [https://dictionary-react-application.vercel.app/](https://dictionary-react-application.vercel.app/)
 
 ## My process
 
