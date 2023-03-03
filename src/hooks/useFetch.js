@@ -4,7 +4,7 @@ nProgress.configure({
   showSpinner: false
 })
 
-export default async function useFetch(url, dataSetter, errorSetter) {
+export default async function useFetch(url, dataSetter, loadingSetter, errorSetter) {
   try {
     nProgress.start()
     const res = await fetch(url)
@@ -15,6 +15,7 @@ export default async function useFetch(url, dataSetter, errorSetter) {
   } catch (err) {
     errorSetter(true)
   } finally {
+    loadingSetter(false)
     nProgress.done()
   }
 }

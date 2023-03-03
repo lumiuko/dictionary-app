@@ -4,7 +4,7 @@ import Meaning from './Meaning'
 import playIcon from '../assets/images/icon-play.svg'
 import newWindowIcon from '../assets/images/icon-new-window.svg'
 
-export default function Word({ data, isError }) {
+export default function Word({ data }) {
   const validPhonetics = data.phonetics?.find(phonetics => phonetics.text && phonetics.audio)
   const audioRef = useRef(null)
 
@@ -17,19 +17,6 @@ export default function Word({ data, isError }) {
   }
 
   const meanings = data.meanings.map((meaning, index) => <Meaning key={index} meaning={meaning} />)
-
-  if (isError) {
-    return (
-      <main className="my-20 tablet:my-[8.25rem] text-center">
-        <div className="text-heading-l">😕</div>
-        <h5 className="font-bold mt-5 tablet:mt-11">No Definitions Found</h5>
-        <p className="mt-3 tablet:mt-6">
-          Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at
-          later time or head to the web instead.
-        </p>
-      </main>
-    )
-  }
 
   return (
     <main className="mt-10 mb-[5.25rem] tablet:mt-11 tablet:mb-[7.75rem]">

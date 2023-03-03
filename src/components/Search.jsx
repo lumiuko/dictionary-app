@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 export default function Search(props) {
-  const [input, setInput] = useState('keyboard')
+  const [queryParams, setQueryParams] = useSearchParams()
+  const initialInput = queryParams.get('word') ?? 'keyboard'
+
+  const [input, setInput] = useState('')
   const [isValid, setIsValid] = useState(true)
 
   const invalidClass = !isValid ? 'border-[1px] border-red' : ''
 
   useEffect(() => {
-    props.fetchData(input)
-  }, [])
+    setInput(initialInput)
+    props.fetchData(initialInput)
+  }, [initialInput])
 
   function handleChange(event) {
     setInput(event.target.value)
@@ -21,7 +26,7 @@ export default function Search(props) {
       return
     }
     setIsValid(true)
-    props.fetchData(input)
+    setQueryParams({ word: input })
   }
 
   return (
