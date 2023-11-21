@@ -50,5 +50,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@flxemt](https://www.frontendmentor.io/profile/flxemt)
-- Twitter - [@flxemt](https://twitter.com/flxemt)
+- Frontend Mentor - [@lumiuko](https://www.frontendmentor.io/profile/lumiuko)
+- Twitter - [@lumiuko](https://twitter.com/lumiuko)
